@@ -1,0 +1,17 @@
+= @entry.blog.title
+
+%p#notice= notice
+%p
+  %strong Title:
+  = @entry.title
+%p
+  %strong Body:
+  = @entry.body
+= link_to 'Edit', edit_entry_path(@entry)
+|
+= link_to 'Back', blog_path(@entry.blog)
+
+= render :partial => 'comments/list'
+
+%h2 New comment
+= render :partial => 'comments/form'
