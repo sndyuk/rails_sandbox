@@ -56,3 +56,9 @@ group :development do
   gem 'hirb-unicode'
 end
 
+group :production do
+  # heroku integrations
+  gem 'rails_12factor'
+end
+
+ruby "2.1.5"
