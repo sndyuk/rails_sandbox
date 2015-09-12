@@ -42,15 +42,23 @@ Rails.application.configure do
   # Mailer
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
   config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.smtp_settings = {
+  #   :enable_starttls_auto => true,
+  #   :address => 'smtp.gmail.com',
+  #   :port => '587',
+  #   :domain => 'smtp.gmail.com',
+  #   :authentication => 'plain',
+  #   :user_name => ENV["GMAIL_USERNAME"],
+  #   :password => ENV["GMAIL_PASSWORD"]
+  # }
 
   config.action_mailer.smtp_settings = {
-    :enable_starttls_auto => true,
-    :address => 'smtp.gmail.com',
-    :port => '587',
-    :domain => 'smtp.gmail.com',
-    :authentication => 'plain',
-    :user_name => '',
-    :user_name => ENV["GMAIL_USERNAME"],
-    :password => ENV["GMAIL_PASSWORD"]
+    :port =>           '587',
+    :address =>        'smtp.mandrillapp.com',
+    :user_name =>      ENV['MANDRILL_USERNAME'],
+    :password =>       ENV['MANDRILL_APIKEY'],
+    :domain =>         'heroku.com',
+    :authentication => :plain
   }
+
 end

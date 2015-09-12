@@ -58,6 +58,7 @@ GEM
     debug_inspector (0.0.2)
     diff-lcs (1.2.5)
     erubis (2.7.0)
+    excon (0.45.4)
     execjs (2.6.0)
     ffi (1.9.10)
     formatador (0.2.5)
@@ -111,6 +112,9 @@ GEM
     lumberjack (1.0.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
+    mandrill-api (1.0.53)
+      excon (>= 0.16.0, < 1.0)
+      json (>= 1.7.7, < 2.0)
     method_source (0.8.2)
     mime-types (2.6.1)
     mini_portile (0.6.2)
@@ -242,6 +246,7 @@ DEPENDENCIES
   hirb-unicode
   jbuilder (~> 2.0)
   jquery-rails
+  mandrill-api
   pg
   rails (= 4.2.4)
   rails_12factor

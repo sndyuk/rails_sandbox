@@ -36,6 +36,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Haml
 gem 'haml-rails'
 
+# Mandrill the mail service
+gem 'mandrill-api'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
