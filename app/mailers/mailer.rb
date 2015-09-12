@@ -1,7 +1,8 @@
 class Mailer < ApplicationMailer
   default from: "info@sndyuk.com"
 
-  def notify_comment(comment)
+  def notify_new_comment(host, comment)
+    @host = host
     @blog = comment.entry.blog
     @entry = comment.entry
     @comment = comment

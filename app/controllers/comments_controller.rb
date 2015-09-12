@@ -9,7 +9,7 @@ class CommentsController < ApplicationController
 
     respond_to do |format|
       if @comment.save
-        Mailer.notify_comment(@comment).deliver_later
+        Mailer.notify_new_comment(request.original_url, @comment).deliver_later
         format.html { redirect_to entry_url(@entry), notice: 'Comment was successfully created.' }
         format.json { render :show, status: :created, location: @comment }
       else
