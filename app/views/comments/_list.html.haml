@@ -11,7 +11,7 @@
       %tr
         %td
           - if comment.status == 'Approved'
-            = comment.body
+            = simple_format(comment.body)
           - else
             = '(承認待ち)'
         %td

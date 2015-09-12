@@ -6,7 +6,7 @@
   = @entry.title
 %p
   %strong Body:
-  = @entry.body
+  = simple_format(@entry.body)
 = link_to 'Edit', edit_entry_path(@entry)
 |
 = link_to 'Back', blog_path(@entry.blog)

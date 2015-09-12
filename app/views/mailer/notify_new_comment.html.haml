@@ -11,4 +11,4 @@
 = "Comment: #{@comment.body}"
 %br
 %br
-= "URL: http://#{Rails.application.config.action_mailer.default_url_options[:host]}/entries/#{@entry.id}"
+= "URL: #{@host}/entries/#{@entry.id}"
